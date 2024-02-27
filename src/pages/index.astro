@@ -13,12 +13,39 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
   <body>
     <Header />
     <main>
-        <h1>Welcome to <span class="text-gradient">PromptLab AI</span></h1>
+      <h1>Welcome to <span class="text-gradient">PromptLab AI</span></h1>
+      <div class="bg-gray-100 p-5">
+        <!-- Container for the main headline -->
+        <div class="mt-5">
+          <h4 class="text-2xl font-bold text-gray-800">Our Product</h4>
+        </div>
+
+          <!-- Middle navigation -->
+          <div class="product-list">
+            <a href="https://promptlabai.com" target="_blank">
+            <div class="product-item">
+              <img src="/1.webp" alt="Product 1" />
+              <span>PromptLab AI</span>
+            </div>
+          </a>
+          <a href="https://promptlabai.com" target="_blank">
+            <div class="product-item">
+              <img src="/1.webp" alt="Product 1" />
+              <span>PromptLab AI</span>
+            </div>
+          </a>
+          <a href="https://promptlabai.com" target="_blank">
+            <div class="product-item">
+              <img src="/1.webp" alt="Product 1" />
+              <span>PromptLab AI</span>
+            </div>
+          </a>
+          </div>
+          </div>
     </main>
     <Footer />
     <style>
       main {
-        margin: auto;
         padding: 1rem;
         width: 800px;
         max-width: calc(100% - 2rem);
@@ -52,7 +79,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
       .instructions {
         margin-bottom: 2rem;
         border: 1px solid rgba(var(--accent-light), 25%);
-        background: linear-gradient(
+        background: linear-gradient
           rgba(var(--accent-dark), 66%),
           rgba(var(--accent-dark), 33%)
         );
@@ -76,6 +103,40 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
         gap: 2rem;
         padding: 0;
       }
+      .text-black {
+        color: black;
+      }
+
+      .product-list {
+    display: flex;
+    flex-direction: column; /* Default vertical layout */
+    align-items: center;
+    color: black;
+  }
+
+  @media (min-width: 768px) {
+    /* This applies to screens larger than 768px, such as desktops */
+    .product-list {
+      flex-direction: row; /* Horizontal layout on larger screens */
+      justify-content: center;
+    }
+  }
+
+  .product-item {
+    margin: 1rem;
+    text-align: center; /* Center the text if needed */
+  }
+
+  .product-item a {
+    text-decoration: none !important; /* Remove the underline from the link */
+    color: black !important; /* Set the link color */
+  
+  }
+
+  .product-item img {
+    width: 200px; /* Set your image size as needed */
+    height: 200px; /* Set your image size as needed */
+  }
     </style>
   </body>
 </html>
